@@ -1,0 +1,50 @@
+|           Interval           |             Luni             |             Marti            |           Miercuri           |              Joi             |            Vineri            |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|            8 - 10            |      MS : (ED038 - PD)       |      MS : (ED038 - PD)       |      PL : (ED038 - CA)       |      SOC : (ED038 - RA)      |      ED038 - goala           |
+|                              |      SOC : (ED041 - IC)      |      ED041 - goala           |      ED041 - goala           |      ED041 - goala           |      ED041 - goala           |
+|                              |      ED069 - goala           |      ED069 - goala           |      ED069 - goala           |      ED069 - goala           |      ED069 - goala           |
+|                              |      AA : (PR011 - EV)       |      PL : (PR011 - RE)       |      SOC : (PR011 - RA)      |      AA : (PR011 - EV)       |      PL : (PR011 - RE)       |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|            10 - 12           |      AA : (ED038 - EV)       |      SOC : (ED038 - RD)      |      SOC : (ED038 - IG)      |      ED038 - goala           |      ED038 - goala           |
+|                              |      ED041 - goala           |      ED041 - goala           |      ED041 - goala           |      ED041 - goala           |      ED041 - goala           |
+|                              |      ED069 - goala           |      ED069 - goala           |      ED069 - goala           |      ED069 - goala           |      ED069 - goala           |
+|                              |      AA : (PR011 - DP)       |      PL : (PR011 - RE)       |      SOC : (PR011 - RD)      |      AA : (PR011 - EV)       |      MS : (PR011 - IC)       |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|            12 - 14           |      PL : (ED038 - MA2)      |      PL : (ED038 - CA)       |      ED038 - goala           |      SOC : (ED038 - RA)      |      ED038 - goala           |
+|                              |      ED041 - goala           |      ED041 - goala           |      ED041 - goala           |      ED041 - goala           |      ED041 - goala           |
+|                              |      ED069 - goala           |      ED069 - goala           |      ED069 - goala           |      ED069 - goala           |      ED069 - goala           |
+|                              |      AA : (PR011 - EV)       |      AA : (PR011 - PC)       |      SOC : (PR011 - RA)      |      AA : (PR011 - EV)       |      MS : (PR011 - IG)       |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|            14 - 16           |      PL : (ED038 - MA2)      |      MS : (ED038 - RA2)      |      ED038 - goala           |      ED038 - goala           |      ED038 - goala           |
+|                              |      ED041 - goala           |      ED041 - goala           |      ED041 - goala           |      ED041 - goala           |      ED041 - goala           |
+|                              |      ED069 - goala           |      ED069 - goala           |      ED069 - goala           |      ED069 - goala           |      ED069 - goala           |
+|                              |      PL : (PR011 - RE)       |      MS : (PR011 - AP)       |      MS : (PR011 - IG)       |      PL : (PR011 - RE)       |      MS : (PR011 - IG)       |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|            16 - 18           |      MS : (ED038 - PD)       |      SOC : (ED038 - RD)      |      ED038 - goala           |      ED038 - goala           |      ED038 - goala           |
+|                              |      ED041 - goala           |      ED041 - goala           |      ED041 - goala           |      ED041 - goala           |      ED041 - goala           |
+|                              |      ED069 - goala           |      ED069 - goala           |      ED069 - goala           |      ED069 - goala           |      ED069 - goala           |
+|                              |      AA : (PR011 - EV)       |      PL : (PR011 - RE)       |      SOC : (PR011 - RD)      |      PL : (PR011 - RE)       |      MS : (PR011 - IC)       |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|            18 - 20           |      MS : (ED038 - PD)       |      PL : (ED038 - MA2)      |      ED038 - goala           |      ED038 - goala           |      ED038 - goala           |
+|                              |      ED041 - goala           |      ED041 - goala           |      ED041 - goala           |      ED041 - goala           |      ED041 - goala           |
+|                              |      ED069 - goala           |      ED069 - goala           |      ED069 - goala           |      ED069 - goala           |      ED069 - goala           |
+|                              |      AA : (PR011 - DP)       |      SOC : (PR011 - RD)      |      SOC : (PR011 - RD)      |      SOC : (PR011 - RD)      |      MS : (PR011 - IC)       |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+----------- Constrângeri obligatorii -----------
+
+=>
+S-au încălcat 0 constrângeri obligatorii!
+
+----------- Constrângeri optionale -----------
+
+=>
+S-au încălcat 0 constrângeri optionale!
+
+
+=>
+S-au generat un total de 107732 stări!
+
+=>
+S-au explorat un total de 48 stări!

@@ -1,0 +1,57 @@
+|           Interval           |             Luni             |             Marti            |           Miercuri           |              Joi             |            Vineri            |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|            8 - 10            |      ED038 - goala           |      ED038 - goala           |      ED038 - goala           |      AA : (ED038 - MA2)      |      AA : (ED038 - MA)       |
+|                              |      ED041 - goala           |      ED041 - goala           |      ED041 - goala           |      MS : (ED041 - CA)       |      MS : (ED041 - IC)       |
+|                              |      ED069 - goala           |      ED069 - goala           |      ED069 - goala           |      MS : (ED069 - PD)       |      MS : (ED069 - IG)       |
+|                              |      PR011 - goala           |      PR011 - goala           |      AA : (PR011 - MA)       |      MS : (PR011 - RA2)      |      PL : (PR011 - RE)       |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|            10 - 12           |      ED038 - goala           |      ED038 - goala           |      ED038 - goala           |      PL : (ED038 - CA)       |      PL : (ED038 - RE)       |
+|                              |      ED041 - goala           |      ED041 - goala           |      MS : (ED041 - MP)       |      AA : (ED041 - SA)       |      MS : (ED041 - IG)       |
+|                              |      ED069 - goala           |      ED069 - goala           |      AA : (ED069 - MA)       |      PL : (ED069 - MA2)      |      SOC : (ED069 - MP)      |
+|                              |      PR011 - goala           |      PR011 - goala           |      AA : (PR011 - PD)       |      PL : (PR011 - RE)       |      SOC : (PR011 - SA)      |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|            12 - 14           |      ED038 - goala           |      ED038 - goala           |      PL : (ED038 - CA)       |      PL : (ED038 - CA)       |      AA : (ED038 - EV)       |
+|                              |      ED041 - goala           |      ED041 - goala           |      SOC : (ED041 - RA)      |      AA : (ED041 - SA)       |      SOC : (ED041 - DA)      |
+|                              |      ED069 - goala           |      ED069 - goala           |      AA : (ED069 - CF)       |      PL : (ED069 - MA2)      |      SOC : (ED069 - IG)      |
+|                              |      PR011 - goala           |      PR011 - goala           |      AA : (PR011 - PD)       |      PL : (PR011 - RE)       |      SOC : (PR011 - SA)      |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|            14 - 16           |      ED038 - goala           |      ED038 - goala           |      AA : (ED038 - CF)       |      MS : (ED038 - IG)       |      SOC : (ED038 - IG)      |
+|                              |      ED041 - goala           |      ED041 - goala           |      AA : (ED041 - MA)       |      MS : (ED041 - RA2)      |      SOC : (ED041 - MA)      |
+|                              |      ED069 - goala           |      ED069 - goala           |      AA : (ED069 - MA2)      |      PL : (ED069 - MA2)      |      SOC : (ED069 - MP)      |
+|                              |      PR011 - goala           |      PR011 - goala           |      AA : (PR011 - RA2)      |      PL : (PR011 - RE)       |      SOC : (PR011 - SA)      |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|            16 - 18           |      ED038 - goala           |      ED038 - goala           |      MS : (ED038 - CA)       |      MS : (ED038 - PD)       |      SOC : (ED038 - IG)      |
+|                              |      ED041 - goala           |      ED041 - goala           |      MS : (ED041 - MP)       |      MS : (ED041 - RA2)      |      SOC : (ED041 - MA)      |
+|                              |      ED069 - goala           |      ED069 - goala           |      MS : (ED069 - PD)       |      PL : (ED069 - CA)       |      SOC : (ED069 - MP)      |
+|                              |      PR011 - goala           |      PR011 - goala           |      MS : (PR011 - RA2)      |      PL : (PR011 - RE)       |      SOC : (PR011 - SA)      |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|            18 - 20           |      ED038 - goala           |      ED038 - goala           |      AA : (ED038 - MA2)      |      MS : (ED038 - PD)       |      SOC : (ED038 - IC)      |
+|                              |      ED041 - goala           |      ED041 - goala           |      MS : (ED041 - MP)       |      MS : (ED041 - RA2)      |      SOC : (ED041 - IG)      |
+|                              |      ED069 - goala           |      ED069 - goala           |      MS : (ED069 - PD)       |      PL : (ED069 - MA2)      |      SOC : (ED069 - MP)      |
+|                              |      PR011 - goala           |      AA : (PR011 - PC)       |      MS : (PR011 - RA2)      |      PL : (PR011 - RE)       |      SOC : (PR011 - SA)      |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+----------- Constrângeri obligatorii -----------
+
+=>
+S-au încălcat 0 constrângeri obligatorii!
+
+----------- Constrângeri optionale -----------
+Profesorul Petru Chiriac nu dorește să predea în intervalul (18, 20)!
+Profesorul Petru Dinu nu dorește să predea în intervalul (10, 12)!
+Profesorul Petru Dinu nu dorește să predea în intervalul (12, 14)!
+Profesorul Ruxandra Albu nu dorește să predea în intervalul (8, 10)!
+Profesorul Ruxandra Epure nu dorește să predea în intervalul (12, 14)!
+Profesorul Ruxandra Epure nu dorește să predea în intervalul (18, 20)!
+Profesorul Sergiu Adamescu nu dorește să predea în intervalul (14, 16)!
+
+=>
+S-au încălcat 7 constrângeri optionale!
+
+
+=>
+S-au generat un total de 310218 stări!
+
+=>
+S-au explorat un total de 70 stări!

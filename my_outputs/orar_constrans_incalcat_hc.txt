@@ -1,0 +1,62 @@
+|           Interval           |             Luni             |             Marti            |           Miercuri           |              Joi             |            Vineri            |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|            8 - 10            |      DS : (EC109 - CI)       |      PCom : (EC109 - VA)     |      PCom : (EC109 - ME)     |      PM : (EC109 - VD)       |      SO : (EC109 - SD)       |
+|                              |      ED043 - goala           |      DS : (ED043 - MP)       |      DS : (ED043 - DD)       |      DS : (ED043 - ME)       |      DS : (ED043 - MP)       |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|            10 - 12           |      DS : (EC109 - MM)       |      PCom : (EC109 - VA)     |      PM : (EC109 - SG)       |      PM : (EC109 - VD)       |      SO : (EC109 - VA)       |
+|                              |      DS : (ED043 - CI)       |      DS : (ED043 - ME)       |      DS : (ED043 - DD)       |      DS : (ED043 - ME)       |      DS : (ED043 - MP)       |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|            12 - 14           |      DS : (EC109 - MM)       |      PCom : (EC109 - VA)     |      PM : (EC109 - SG)       |      PM : (EC109 - VD)       |      SO : (EC109 - SD)       |
+|                              |      DS : (ED043 - CI)       |      DS : (ED043 - ME)       |      DS : (ED043 - DD)       |      DS : (ED043 - ME)       |      DS : (ED043 - SG)       |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|            14 - 16           |      DS : (EC109 - MP)       |      PCom : (EC109 - VA)     |      PM : (EC109 - SG)       |      SO : (EC109 - RA)       |      SO : (EC109 - SD)       |
+|                              |      ED043 - goala           |      ED043 - goala           |      PM : (ED043 - RA)       |      ED043 - goala           |      PM : (ED043 - RA)       |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|            16 - 18           |      DS : (EC109 - MP)       |      PCom : (EC109 - VA)     |      PM : (EC109 - SG)       |      SO : (EC109 - ME)       |      SO : (EC109 - SD)       |
+|                              |      DS : (ED043 - DD)       |      DS : (ED043 - DD)       |      DS : (ED043 - DD)       |      DS : (ED043 - CI)       |      DS : (ED043 - SG)       |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|            18 - 20           |      PCom : (EC109 - MM)     |      PCom : (EC109 - VA)     |      PM : (EC109 - SG)       |      SO : (EC109 - SD)       |      SO : (EC109 - RA)       |
+|                              |      DS : (ED043 - MP)       |      DS : (ED043 - MP)       |      DS : (ED043 - DD)       |      PM : (ED043 - CP2)      |      SO : (ED043 - SD)       |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+----------- Constrângeri obligatorii -----------
+
+=>
+S-au încălcat 0 constrângeri obligatorii!
+
+----------- Constrângeri optionale -----------
+Profesorul Cristina Ionescu nu dorește să predea în intervalul (8, 10)!
+Profesorul Madalina Popa nu dorește să predea în intervalul (14, 16)!
+Profesorul Madalina Popa nu dorește să predea în intervalul (16, 18)!
+Profesorul Marius Munteanu nu dorește să predea în ziua Luni!
+Profesorul Marius Munteanu nu dorește să predea în ziua Luni!
+Profesorul Marius Munteanu nu dorește să predea în ziua Luni!
+Profesorul Marius Munteanu nu dorește să predea în intervalul (10, 12)!
+Profesorul Mihai Epure nu dorește să predea în ziua Miercuri!
+Profesorul Mihai Epure nu dorește să predea în intervalul (16, 18)!
+Profesorul Ruxandra Andronescu nu dorește să predea în ziua Joi!
+Profesorul Ruxandra Andronescu nu dorește să predea în intervalul (18, 20)!
+Profesorul Sergiu Dinu nu dorește să predea în ziua Joi!
+Profesorul Sergiu Dinu nu dorește să predea în intervalul (8, 10)!
+Profesorul Sergiu Dinu nu dorește să predea în intervalul (12, 14)!
+Profesorul Sergiu Dinu nu dorește să predea în intervalul (14, 16)!
+Profesorul Sergiu Dinu nu dorește să predea în intervalul (16, 18)!
+Profesorul Vlad Anton nu dorește să predea în ziua Vineri!
+Profesorul Vlad Anton nu dorește să predea în intervalul (8, 10)!
+Profesorul Vlad Anton nu dorește să predea în intervalul (12, 14)!
+Profesorul Vlad Anton nu dorește să predea în intervalul (14, 16)!
+Profesorul Vlad Anton nu dorește să predea în intervalul (16, 18)!
+Profesorul Vlad Anton nu dorește să predea în intervalul (18, 20)!
+Profesorul Vlad Dumitrescu nu dorește să predea în intervalul (10, 12)!
+Profesorul Vlad Dumitrescu nu dorește să predea în intervalul (12, 14)!
+
+=>
+S-au încălcat 24 constrângeri optionale!
+
+
+=>
+S-au generat un total de 235562 stări!
+
+=>
+S-au explorat un total de 167 stări!
