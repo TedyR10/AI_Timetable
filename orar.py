@@ -13,16 +13,11 @@ PROFESORI = 'Profesori'
 SALI = 'Sali'
 CAPACITATE = 'Capacitate'
 CONSTRANGERI = 'Constrangeri'
-# # scoruri pt profi si materii
 
 total_states_generated = 0
 total_states_explored = 0
 
 def parse_interval(interval : str):
-    '''
-    Se parsează un interval de forma "Ora1 - Ora2" în cele 2 componente.
-    '''
-
     intervals = interval.split('-')
     return int(intervals[0].strip()), int(intervals[1].strip())
 
@@ -46,7 +41,7 @@ class State:
         return len(self.subjects_remaining) == 0
 
     def generate_neighbors(self):
-        # Generate neighboring states by assigning subjects to empty slots
+        # Generate all possible neighbors of the current state
         neighbors = []
         timetable_specs = self.timetable_specs
         timetable = self.timetable
@@ -59,18 +54,21 @@ class State:
                             for professor in timetable_specs[PROFESORI]:
                                 if professor not in self.profs_in_interval[day][interval] and timetable[day][interval][classroom] is None:
                                     if self.is_valid_assignment(day, interval, subject, professor, classroom):
+                                        # Copy the current state and update it with the new assignment
                                         new_timetable = copy.deepcopy(self.timetable)
                                         new_timetable[day][interval][classroom] = (professor, subject)
                                         new_profs_in_interval = copy.deepcopy(self.profs_in_interval)
                                         new_profs_in_interval[day][interval].append(professor)
                                         new_subjects_remaining = copy.deepcopy(self.subjects_remaining)
 
+                                        # Update the remaining subjects to be scheduled
                                         new_subjects_remaining[subject] -= timetable_specs[SALI][classroom][CAPACITATE]
                                         if new_subjects_remaining[subject] <= 0:
                                             del new_subjects_remaining[subject]
                                         new_prof_hrs = copy.deepcopy(self.prof_hrs)
                                         new_prof_hrs[professor] += 1
 
+                                        # Update the prof and classroom costs
                                         new_profs_cost = copy.deepcopy(self.prof_cost)
                                         if len(timetable_specs[PROFESORI][professor][MATERII]) > 1:
                                             for materie in timetable_specs[PROFESORI][professor][MATERII]:
@@ -83,6 +81,7 @@ class State:
                                                 if materie in new_subjects_remaining:
                                                     new_classroom_cost += 1
 
+                                        # Create the new state and add it to the neighbors
                                         new_cost = self.cost + 1
                                         new_state = State(new_timetable, timetable_specs, new_subjects_remaining, new_prof_hrs, new_profs_in_interval, new_cost, new_profs_cost, new_classroom_cost)
                                         new_state.total_violations = new_state.check_optional_constraints(day, interval, subject, professor, classroom)
@@ -98,18 +97,19 @@ class State:
         if self.timetable[day][interval][classroom] is not None:
             return False  # Room already occupied in this interval
         if professor not in timetable_specs[PROFESORI]:
-            return False
+            return False # Professor not in the timetable
         if subject not in timetable_specs[MATERII]:
-            return False
+            return False # Subject not in the timetable
         if subject not in timetable_specs[PROFESORI][professor][MATERII]:
             return False  # Professor doesn't teach this subject
         if subject not in timetable_specs[SALI][classroom][MATERII]:
             return False  # Room doesn't support this subject
         if self.prof_hrs[professor] + 1 > 7:
-            return False
+            return False # Professor already has 7 hours scheduled
         return True
     
     def check_optional_constraints(self, day, interval, subject, professor, classroom):
+        # Check optional constraints and return the number of violations
         violations = 0
         for prof in self.timetable_specs[PROFESORI]:
             for const in self.timetable_specs[PROFESORI][prof][CONSTRANGERI]:
@@ -162,6 +162,7 @@ class AStar:
         self.initial_state = initial_state
 
     def heuristic(self, state):
+        # Heuristic function to estimate the cost to reach the goal state
         heuristic_value = 0
         for subject in state.subjects_remaining:
             heuristic_value += state.subjects_remaining[subject]
@@ -179,10 +180,6 @@ class AStar:
         closed_set = set()
         while open_set:
             h, current_state = heapq.heappop(open_set)
-
-            # print("Current h: ", h)
-            # print("Current state violations: ", current_state.total_violations)
-            # print("Current cost: ", current_state.cost)
 
             if current_state in closed_set:
                 continue
@@ -204,43 +201,41 @@ class AStar:
         return None  # No valid solution found
 
 
-# Entry point for the A* algorithm
 def get_timetable(timetable_specs, algorithm):
     
-    # Initialize an empty timetable structure
+    # Initialize an empty timetable
     timetable = {day: {eval(interval): {classroom: None for classroom in timetable_specs[SALI]} for interval in timetable_specs[INTERVALE]} for day in timetable_specs[ZILE]}
     
     # Initialize the subjects remaining to be assigned
     subjects_remaining = {subject: timetable_specs[MATERII][subject] 
                           for subject in timetable_specs[MATERII]}
     
+    # Initialize the hours for each professor
     prof_hrs = {prof: 0 for prof in timetable_specs[PROFESORI]}
 
+    # Initialize the professors in each interval
     profs_in_interval = {day: {eval(interval): [] for interval in timetable_specs[INTERVALE]} for day in timetable_specs[ZILE]}
     
     # Create an initial state with the empty timetable
     initial_state = State(timetable, timetable_specs, subjects_remaining, prof_hrs, profs_in_interval, 0, 0, 0)
     
     if algorithm == 'astar':
-        # Create and execute the AStar
         astar_search = AStar(initial_state)
         result = astar_search.search()
     else:
-        # Random Restart Hill-Climbing
         result = HillClimbing.random_restart_hill_climbing(initial_state)
     
     if result:
-        # Format the output timetable as needed
         return result.timetable
     else:
         raise Exception("No valid timetable found")
 
-# Implement the Hill-Climbing algorithm for timetable scheduling
 class HillClimbing:
     def __init__(self, initial_state):
         self.initial_state = initial_state
 
     def total_cost(self):
+        # Calculate the total cost of the current state
         state = self.initial_state
         total_cost_value = 0
         if len(state.subjects_remaining) != 0:
@@ -262,24 +257,12 @@ class HillClimbing:
         global total_states_generated
 
         for _ in range(max_iters):
-            # Generate all neighbors
-            # print()
-            # print()
-            # print()
-            # print("Current cost: ", current_cost)
-            # print("Current state: ", current_state.timetable)
-            # print()
-            # print()
-            # print()
-
             best_neighbor = None
             searching = True
 
             # Find the best neighbor (with the lowest cost)
             for neighbor in current_state.generate_neighbors():
                 total_states_generated += 1
-                # print("Cost: ", HillClimbing(neighbor).total_cost())
-                # print("Neighbor: ", neighbor.timetable)
                 if HillClimbing(neighbor).total_cost() <= current_cost:
                     best_neighbor = neighbor
                     searching = False
@@ -307,28 +290,20 @@ class HillClimbing:
 
         neighbors = current_state.generate_neighbors()
 
-        best_state = None
-
         while restarts < max_restarts:
-            # Run the Hill Climbing algorithm from the current state
             final_state = HillClimbing(current_state).search(run_max_iters)
             
             total_iters += run_max_iters
             total_states += 1
             
             if final_state.is_goal():
-                # If a goal state is found, return success and the final state
                 return final_state
             
-            # If no goal, restart with a new random initial state
             restarts += 1
-            # Generate a new random state based on the initial state structure
-            current_state = random.choice(neighbors)
-        
-        if best_state:
-            return best_state
 
-        # If no solution is found after all restarts, return failure
+            # Generate a new random state based on the neighbors of the initial state
+            current_state = random.choice(neighbors)
+
         return None
 
 
@@ -349,10 +324,6 @@ if __name__ == '__main__':
     timetable_specs = read_yaml_file(input_name)
 
     debug_flag = True
-
-    # timetable = {day : {eval(interval) : {} for interval in timetable_specs[INTERVALE]} for day in timetable_specs[ZILE]}
-
-    # initial_state = State(timetable, 0, timetable_specs[PROFESORI])
 
     if sys.argv[2] == 'astar':
         timetable = get_timetable(timetable_specs, 'astar')
